@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: flatris 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: flatris 
+    spec:
+      containers:
+        - name: flatris 
+          image: ronaiacr.azurecr.io/flatris 
+          ports:
+          - containerPort: 3000
