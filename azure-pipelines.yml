@@ -56,7 +56,7 @@ stages:
     displayName: Deploy job
     pool:
       vmImage: $(vmImageName)
-    environment: 'smarthotel-dev.bookings'
+    environment: 'smarthotel-dev'
     strategy:
       runOnce:
         deploy:
