@@ -48,6 +48,16 @@ stages:
         artifactName: 'manifests'
         targetPath: 'manifests'
 
+- stage: Test
+  jobs:
+  - deployment: deployWebApp
+    environment: 'myenv'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - script: echo hello
+
 - stage: Deploy
   displayName: Deploy stage
   dependsOn: Build
