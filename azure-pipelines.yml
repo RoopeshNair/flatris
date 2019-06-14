@@ -51,7 +51,7 @@ stages:
 - stage: Test
   jobs:
   - deployment: deployWebApp
-    environment: 'myenv'
+    environment: 'myenv2'
     strategy:
       runOnce:
         deploy:
